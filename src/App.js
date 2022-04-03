@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import CategoryPage from './pages/CategoryPage';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+  } from "react-router-dom";
+import HomePage from './pages/HomePage';
+import Navbar from './components/Navbar';
+import MenuDetailPage from './pages/MenuDetailPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Demo Project GA/GTM
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <Navbar />
+                <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    <Route path='/category-page' element={<CategoryPage />} />
+                    <Route path='/menu/:urlKey' element={<MenuDetailPage />} />
+                </Routes>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

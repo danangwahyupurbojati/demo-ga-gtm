@@ -1,0 +1,11 @@
+.detailImageWrapper {
+    margin: 0 auto;
+    width: 500px;
+    height: 300px;
+}
+
+.detailImageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

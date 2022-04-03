@@ -1,0 +1,22 @@
+.menuWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-link {
+    display: inline-block;
+    text-decoration: none;
+    margin: 16px;
+}
+
+.imageWrapper {
+    width: 250px;
+    height: 300px;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
