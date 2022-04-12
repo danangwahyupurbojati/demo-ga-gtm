@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import './App.css';
 import CategoryPage from './pages/CategoryPage';
 import {
@@ -8,8 +9,16 @@ import {
 import HomePage from './pages/HomePage';
 import Navbar from './components/Navbar';
 import MenuDetailPage from './pages/MenuDetailPage';
+import TagManager from 'react-gtm-module'
 
 function App() {
+    useEffect(() => {
+        console.log('App useeffect called')
+        TagManager.initialize({
+            gtmId: 'GTM-MQNLWR9'
+        });
+    }, []);
+    
     return (
         <BrowserRouter>
             <div className="App">
